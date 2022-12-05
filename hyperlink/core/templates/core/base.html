@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block title %}
+        <title>Django</title>
+        {% endblock title %}
+    </head>
+    <body>
+        {% block nav %}
+        <nav>
+            <ul>
+                <li><a href= "/">Home</a></li>
+                <li><a href= "/about">About</a></li>
+                <li><a href= "/cor/learndj">Django Course</a></li>
+            </ul>
+        </nav>
+        {% endblock nav %}
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        {% block content %} {% endblock content %}
+    </body>
+</html>
