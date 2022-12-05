@@ -17,15 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from eco import views
-
 router=DefaultRouter()
 
 router.register('Customer', views.CustomerViewSet, basename='customer')
 router.register('User', views.UserViewSet, basename='user')
 router.register('Item', views.ItemViewSet, basename='item')
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(router.urls)),
-    path('auth/', include('rest_framework.urls', 'rest_framework')),
-]
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include(router.urls)),
+#     path('auth/', include('rest_framework.urls', 'rest_framework')),
+# ]
