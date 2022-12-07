@@ -9,7 +9,7 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
-    list_display =  ['id', 'c_name', 'address', 'contact', 'email']
+    list_display =  ['id', 'c_name', 'address', 'contact', 'email', 'items']
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):

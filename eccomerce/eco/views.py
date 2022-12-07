@@ -11,6 +11,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     serializer_class=CustomerSerializer
     authentication_classes=[SessionAuthentication]
 
+
 class UserViewSet(viewsets.ModelViewSet):
     queryset= User.objects.all()
     serializer_class=UserSerializer
