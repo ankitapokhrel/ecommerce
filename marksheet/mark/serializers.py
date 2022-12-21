@@ -17,7 +17,7 @@ class StudentSerializer(serializers.ModelSerializer):
         model= Student
         fields=['id', 's_name', 'roll', 'address', 'total_marks', 'percentage', 'marks']
     
-    def create(self, validated_data):   # to get marks input under the student class. 
+    def create(self, validated_data):   # to input marks under the student class. 
         marks = validated_data.pop('marks')
         student =Student.objects.create(**validated_data)
         for i in marks:
@@ -25,7 +25,6 @@ class StudentSerializer(serializers.ModelSerializer):
         return student
         
     def get_total_marks(self, student):
-
         total=sum(Marks.objects.filter(student=student).values_list('marks', flat=True))
         return total
 

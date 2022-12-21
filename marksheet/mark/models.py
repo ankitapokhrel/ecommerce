@@ -8,7 +8,7 @@ class Student(models.Model):
     address=models.CharField(max_length=50)
 
     def __str__(self):
-        return  '{}'.format (self.s_name)    # returning student name from class.
+        return  '{}'.format(self.s_name)    # returning student name from class.
 
 class Marks(models.Model):
     subject=models.CharField(max_length=100)
