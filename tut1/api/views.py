@@ -60,7 +60,6 @@ class StudentAPI(View):
         # json_data=JSONRenderer().render(serializer.errors)
         # return HttpResponse(json_data, content_type='application/json')
 
-
     def delete(self, request, *args, **kwargs):
         json_data= request.body
         stream=io.BytesIO(stream)
