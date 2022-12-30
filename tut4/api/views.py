@@ -24,17 +24,6 @@ class SongViewSet(viewsets.ModelViewSet):
 
     def list(self, request, **kwargs):  
         data = {} 
-
-        
-        # total_duration = Song.objects.all().aggregate(Sum("duration"))
-        # avg_duration = Song.objects.all().aggregate(Avg("duration"))
-        # max_duration= Song.objects.all().aggregate(Max('duration'))
-        # min_duration= Song.objects.values('duration').aggregate(Min('duration'))
-        # data['duration']=total_duration
-        # data['avg']=avg_duration
-        # data['min']=min_duration       
-        # data['max']=max_duration
-        
         song_features =Song.objects.values('duration').aggregate(
             duration_sum= Sum('duration'),
             max_duration= Max('duration'),

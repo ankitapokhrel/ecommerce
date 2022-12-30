@@ -28,6 +28,7 @@ router.register('Student', views.StudentViewSet, basename='student')
 router.register('Marks', views.MarksViewSet, basename='marks')
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('auth/', include('rest_framework.urls', 'rest_framework')),
